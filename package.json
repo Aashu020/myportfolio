@@ -11,10 +11,11 @@
   },
   "dependencies": {
     "bootstrap": "^5.3.6",
-    "infinite-react-carousel": "^1.2.11",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
+    "react-slick": "^0.30.3",
     "react-type-animation": "^3.2.0",
+    "slick-carousel": "^1.8.1",
     "swiper": "^11.2.6"
   },
   "devDependencies": {

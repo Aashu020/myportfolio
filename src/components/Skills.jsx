@@ -185,4 +185,4 @@ const SkillCarousel = () => {
   );
 };
 
-export default SkillCarousel;
+export default SkillCarousel; 
