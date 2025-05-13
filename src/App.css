@@ -10,6 +10,10 @@
 body {
   font-family: 'Muttcha', sans-serif;
 }
+input,
+textarea {
+  text-transform: none !important;
+}
 .skill-overlay:hover .skill-progress {
   transform: translateX(0);
 }
