@@ -61,7 +61,7 @@ const projects = [
   { name: 'Moonstone', url: 'https://rajhansmoonstone.com/' },
   { name: 'Rainbowland', url: 'https://rainbowland.vercel.app/' },
   { name: 'Devcheems', url: 'https://devcheems.vercel.app/' },
-  { name: 'Portfolio', url: 'https://devcheems.vercel.app/' },
+  { name: 'Portfolio', url: 'https://myportfolio-self-eta-71.vercel.app/' },
   { name: 'Aroundmesale', url: 'https://aroundmesale.com/' }
 ];
 
@@ -80,7 +80,7 @@ const Projects = () => {
   };
 
   return (
-    <section className="py-5 ">
+    <section className="py-5 " id='project'>
       <div className="container">
         <h2 className="text-center fw-bold mb-4">My Projects</h2>
         <div className="row g-4">

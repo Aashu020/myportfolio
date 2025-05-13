@@ -4,7 +4,7 @@ import img from "../assets/yuta.jpg"
 
 const About = () => {
   return (
-    <section className="py-5">
+    <section className="py-5" id='about'>
       <div className="container">
         <div className="row align-items-center">
           <div className="col-md-6 mb-4 mb-md-0">

@@ -47,7 +47,7 @@ function Contact() {
   };
 
   return (
-    <section className="py-5">
+    <section className="py-5" id="contact">
   <div className="container px-4 px-md-5">
     <div className="row align-items-center justify-content-center g-0">
         <h2 className="text-center fw-bold mb-4">Contact</h2>

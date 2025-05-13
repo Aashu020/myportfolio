@@ -64,7 +64,7 @@ const SkillCarousel = () => {
   }, []);
 
   return (
-    <section className="py-5">
+    <section className="py-5" id='skill'>
       <div className="container">
         <h2 className="text-center fw-bold mb-4">My Skills</h2>
         <div className="row">
