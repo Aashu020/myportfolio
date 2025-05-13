@@ -1,0 +1,15 @@
+/* src/fonts.css or inside App.css */
+@font-face {
+  font-family: 'Muttcha';
+  src: url('assets/fonts/Muttcha.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+body {
+  font-family: 'Muttcha', sans-serif;
+}
+.skill-overlay:hover .skill-progress {
+  transform: translateX(0);
+}
