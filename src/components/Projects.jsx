@@ -98,6 +98,7 @@ const Projects = () => {
                   src={hoveredIndex === index ? hoverImages[index] : defaultImages[index]}
                   alt={project.name}
                   className=""
+                  loading="lazy"
                   style={{
                     width: '100%',
                     height: '400px',

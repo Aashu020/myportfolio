@@ -13,6 +13,7 @@ function HeroSection() {
               src={img}
               alt="Hero Avatar"
               className="img-fluid"
+              loading="lazy"
               style={{ maxHeight: "calc(100vh - 90px)" }}
             />
           </div>

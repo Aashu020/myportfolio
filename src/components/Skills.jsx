@@ -93,6 +93,7 @@ const SkillCarousel = () => {
                       src={src}
                       alt={labels[index]}
                       className="img-fluid rounded-3 shadow-sm"
+                      loading="lazy"
                       style={{
                         width: '250px',
                         height: '250px',
@@ -135,6 +136,7 @@ const SkillCarousel = () => {
                           src={skillImages[index]}
                           alt={`${labels[index]} logo`}
                           className="img-fluid mb-auto"
+                          loading="lazy"
                           style={{
                             width: '100px',
                             height: '100px',

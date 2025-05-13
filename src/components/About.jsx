@@ -12,7 +12,7 @@ const About = () => {
               src={img}
               alt="About Us"
               className=""
-          
+              loading="lazy"
               style={{width:"100%", height:"500px", objectFit:"contain"}}
             />
           </div>

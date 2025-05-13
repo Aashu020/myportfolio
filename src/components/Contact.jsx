@@ -100,6 +100,7 @@ function Contact() {
           src={yuji}
           alt="Contact Illustration"
           className="img-fluid rounded"
+          loading="lazy"
           style={{ maxHeight: "500px", objectFit: "cover" }}
         />
       </div>
