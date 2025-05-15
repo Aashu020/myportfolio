@@ -69,18 +69,16 @@ const Projects = () => {
   const [displayCount, setDisplayCount] = useState(8);
   const [hoveredIndex, setHoveredIndex] = useState(null);
 
-  // Handle click to redirect to project website
   const handleClick = (url) => {
     window.location.href = url;
   };
 
-  // Load all projects
   const handleViewMore = () => {
     setDisplayCount(projects.length);
   };
 
   return (
-    <section className="py-5 " id='project'>
+    <section className="py-5" id="project">
       <div className="container">
         <h2 className="text-center fw-bold mb-4">My Projects</h2>
         <div className="row g-4">
@@ -90,14 +88,20 @@ const Projects = () => {
               className="col-12 col-sm-6 col-md-4 col-lg-4"
               onMouseEnter={() => setHoveredIndex(index)}
               onMouseLeave={() => setHoveredIndex(null)}
+              onTouchStart={() =>
+                setHoveredIndex((prev) => (prev === index ? null : index))
+              }
               onClick={() => handleClick(project.url)}
               style={{ cursor: 'pointer' }}
             >
               <div className="position-relative d-flex justify-content-center align-items-center">
                 <img
-                  src={hoveredIndex === index ? hoverImages[index] : defaultImages[index]}
+                  src={
+                    hoveredIndex === index
+                      ? hoverImages[index]
+                      : defaultImages[index]
+                  }
                   alt={project.name}
-                  className=""
                   loading="lazy"
                   style={{
                     width: '100%',
@@ -105,7 +109,8 @@ const Projects = () => {
                     objectFit: 'contain',
                   }}
                   onError={(e) => {
-                    e.target.src = 'https://via.placeholder.com/150?text=Image+Not+Found';
+                    e.target.src =
+                      'https://via.placeholder.com/150?text=Image+Not+Found';
                   }}
                 />
                 <div
@@ -117,7 +122,7 @@ const Projects = () => {
                     padding: '5px 0',
                     fontSize: '16px',
                     fontWeight: '500',
-                    letterSpacing:"3px"
+                    letterSpacing: '3px',
                   }}
                 >
                   {project.name}
@@ -128,10 +133,7 @@ const Projects = () => {
         </div>
         {displayCount < projects.length && (
           <div className="text-center mt-4">
-            <button
-              className="btn btn-secondary"
-              onClick={handleViewMore}
-            >
+            <button className="btn btn-secondary" onClick={handleViewMore}>
               View More
             </button>
           </div>
