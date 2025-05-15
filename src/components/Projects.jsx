@@ -80,7 +80,7 @@ const Projects = () => {
   return (
     <section className="py-5" id="project">
       <div className="container">
-        <h2 className="text-center fw-bold mb-4">My Projects</h2>
+        <h2 className="text-center fw-bold mb-md-4">My Projects</h2>
         <div className="row g-4">
           {projects.slice(0, displayCount).map((project, index) => (
             <div
