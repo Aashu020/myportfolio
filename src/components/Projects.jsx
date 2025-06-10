@@ -2,14 +2,14 @@ import React, { useState } from 'react';
 
 // Import default images
 import akaza from '../assets/akaza.png';
-import yuta from '../assets/dabi.jpg';
-import toji from '../assets/toji.jpg';
-import kakashi from '../assets/kakshi.jpg';
-import mikey from '../assets/mikey.jpg';
-import eren from '../assets/eren.jpg';
-import bloodman from '../assets/bloodman.jpg';
-import itachi from '../assets/itachi1.jpg';
-import sukuna from '../assets/sukuna.jpg';
+import yuta from '../assets/dabi.png';
+import toji from '../assets/toji.png';
+import kakashi from '../assets/kakshi.png';
+import mikey from '../assets/mikey.png';
+import eren from '../assets/eren.png';
+import bloodman from '../assets/bloodman.png';
+import itachi from '../assets/itachi1.png';
+import sukuna from '../assets/sukuna.png';
 import rengoku from '../assets/rengoku.png';
 
 // Import hover images
@@ -61,7 +61,7 @@ const projects = [
   { name: 'Moonstone', url: 'https://rajhansmoonstone.com/',stack:['Javascript', 'HTML5', 'CSS', 'Bootstrap', 'Git', 'Vercel', 'GTM', 'Google Ads'] },
   { name: 'Rainbowland', url: 'https://rainbowland.vercel.app/', stack:['Javascript', 'HTML5', 'CSS', 'Bootstrap', 'Git', 'AppScript'] },
   { name: 'Devcheems', url: 'https://devcheems.vercel.app/', stack:['React.js', 'Node.Js', 'Javascript', 'HTML5', 'Tailwind CSS', 'Netlify', 'App-Script'] },
-  { name: 'Portfolio', url: 'https://myportfolio-self-eta-71.vercel.app/',stack:['React.js', 'Node.Js', 'Javascript', 'HTML5', 'Tailwind CSS', 'Vercel', 'App-Script']  },
+  { name: 'Portfolio', url: 'https://myportfolio-self-eta-71.vercel.app/',stack:['React.js', 'Node.Js', 'Javascript', 'HTML5', 'Bootstrap', 'Vercel', 'App-Script']  },
   { name: 'Aroundmesale', url: 'https://aroundmesale.com/', stack:['React.js', 'Node.Js', 'Express' ,'Javascript', 'HTML5', 'CSS3', 'Vercel',] }
 ];
 

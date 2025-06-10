@@ -1,4 +1,4 @@
-import img from "../assets/geto1.jpg";
+import img from "../assets/geto1.png";
 import { TypeAnimation } from 'react-type-animation';
 
 function HeroSection() {

@@ -10,7 +10,7 @@ import About from './components/About';
 function Home() {
 
   return (
-    <div className={`min-vh-100 bg-white`}>
+    <div className={`min-vh-100`} style={{backgroundColor:"rgb(252,250,246)"}}>
       <Navbar />
       <HeroSection />
       <Skills />

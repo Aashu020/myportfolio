@@ -1,6 +1,6 @@
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import img from "../assets/yuta.jpg"
+import img from "../assets/yuta.png"
 
 const About = () => {
   return (

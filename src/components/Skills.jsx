@@ -6,14 +6,14 @@ import "swiper/css";
 // Character images
 import img1 from '../assets/ayanakoji.png';
 import img2 from '../assets/ichi-removebg-preview.png';
-import img3 from '../assets/gojo.jpg';
-import img4 from '../assets/levi.jpg';
+import img3 from '../assets/gojo.png';
+import img4 from '../assets/levi.png';
 import img5 from '../assets/killua.png';
 import img6 from '../assets/lucifer.png';
-import img7 from '../assets/blindfolded.jpg';
+import img7 from '../assets/blindfolded.png';
 import img8 from '../assets/levi1.png';
 import img9 from '../assets/nanami.png';
-import img10 from '../assets/grimjjow.jpg';
+import img10 from '../assets/grimjjow.png';
 
 // Skill logos
 import react from '../assets/react.png';
