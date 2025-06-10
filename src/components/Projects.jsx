@@ -53,16 +53,16 @@ const hoverImages = [
 
 // Project labels and website URLs
 const projects = [
-  { name: 'Ayurveda', url: 'https://schoolofayurveda.in/' },
-  { name: 'Mauli', url: 'https://maulibusiness.com/' },
-  { name: 'Atharvatech', url: 'https://atharvatechindia.com/' },
-  { name: 'Bachatgat', url: 'https://bachatgat.example.com' },
-  { name: 'Edspride Class', url: 'https://edspride.in/' },
-  { name: 'Moonstone', url: 'https://rajhansmoonstone.com/' },
-  { name: 'Rainbowland', url: 'https://rainbowland.vercel.app/' },
-  { name: 'Devcheems', url: 'https://devcheems.vercel.app/' },
-  { name: 'Portfolio', url: 'https://myportfolio-self-eta-71.vercel.app/' },
-  { name: 'Aroundmesale', url: 'https://aroundmesale.com/' }
+  { name: 'Ayurveda', url: 'https://schoolofayurveda.in/', stack:['React.js', 'Node.Js', 'Javascript', 'HTML5', 'Tailwind CSS', 'FFMPEG', 'Node-Cron']},
+  { name: 'Mauli', url: 'https://maulibusiness.com/', stack:['React.js', 'Node.Js', 'Javascript', 'HTML5', 'Tailwind CSS', 'Vercel', 'Render'] },
+  { name: 'Atharvatech', url: 'https://atharvatechindia.com/', stack:['React.js', 'Node.Js', 'Javascript', 'HTML5', 'Tailwind CSS', 'Vercel'] },
+  { name: 'Bachatgat', url: 'https://bachatfrontend.codifyinstitute.org/', stack:['React.js', 'Node.Js', 'Javascript', 'HTML5', 'Tailwind CSS', 'Vercel', 'Node-Cron'] },
+  { name: 'Edspride Class', url: 'https://edspride.in/', stack:['React.js', 'Node.Js', 'Javascript', 'HTML5', 'Tailwind CSS', 'Git'] },
+  { name: 'Moonstone', url: 'https://rajhansmoonstone.com/',stack:['Javascript', 'HTML5', 'CSS', 'Bootstrap', 'Git', 'Vercel', 'GTM', 'Google Ads'] },
+  { name: 'Rainbowland', url: 'https://rainbowland.vercel.app/', stack:['Javascript', 'HTML5', 'CSS', 'Bootstrap', 'Git', 'AppScript'] },
+  { name: 'Devcheems', url: 'https://devcheems.vercel.app/', stack:['React.js', 'Node.Js', 'Javascript', 'HTML5', 'Tailwind CSS', 'Netlify', 'App-Script'] },
+  { name: 'Portfolio', url: 'https://myportfolio-self-eta-71.vercel.app/',stack:['React.js', 'Node.Js', 'Javascript', 'HTML5', 'Tailwind CSS', 'Vercel', 'App-Script']  },
+  { name: 'Aroundmesale', url: 'https://aroundmesale.com/', stack:['React.js', 'Node.Js', 'Express' ,'Javascript', 'HTML5', 'CSS3', 'Vercel',] }
 ];
 
 const Projects = () => {
@@ -91,16 +91,12 @@ const Projects = () => {
               onTouchStart={() =>
                 setHoveredIndex((prev) => (prev === index ? null : index))
               }
-              onClick={() => handleClick(project.url)}
               style={{ cursor: 'pointer' }}
+              onClick={() => handleClick(project.url)}
             >
-              <div className="position-relative d-flex justify-content-center align-items-center">
+              <div className="position-relative d-flex flex-column align-items-center">
                 <img
-                  src={
-                    hoveredIndex === index
-                      ? hoverImages[index]
-                      : defaultImages[index]
-                  }
+                  src={hoveredIndex === index ? hoverImages[index] : defaultImages[index]}
                   alt={project.name}
                   loading="lazy"
                   style={{
@@ -109,10 +105,40 @@ const Projects = () => {
                     objectFit: 'contain',
                   }}
                   onError={(e) => {
-                    e.target.src =
-                      'https://via.placeholder.com/150?text=Image+Not+Found';
+                    e.target.src = 'https://via.placeholder.com/150?text=Image+Not+Found';
                   }}
                 />
+                
+                {/* Tech Stack Overlay Display on Hover */}
+                {hoveredIndex === index && (
+                  <div
+                    className="position-absolute d-flex flex-wrap align-items-center gap-2 w-100 h-10 "
+                    style={{
+                      bottom: '0',
+                      marginBottom:'1.5rem',
+                      left: '0',
+                      zIndex: 10,
+                      padding: '20px',
+                    }}
+                  >
+                    {project.stack.map((tech, i) => (
+                      <span
+                        key={i}
+                        className="d-inline-block px-3 py-1 text-xs fw-medium text-gray rounded-pill"
+                        style={{
+                          backgroundColor: 'rgba(0, 0, 0, 0.1 )',
+                          border: '1px solid rgba(0, 0, 0)',
+                          fontSize: '12px',
+                          whiteSpace: 'nowrap',
+                        }}
+                      >
+                        {tech}
+                      </span>
+                    ))}
+                  </div>
+                )}
+  
+                {/* Project Name */}
                 <div
                   className="position-absolute text-center w-100"
                   style={{
@@ -123,6 +149,7 @@ const Projects = () => {
                     fontSize: '16px',
                     fontWeight: '500',
                     letterSpacing: '3px',
+                    zIndex: 5,
                   }}
                 >
                   {project.name}
@@ -131,6 +158,8 @@ const Projects = () => {
             </div>
           ))}
         </div>
+  
+        {/* View More Button */}
         {displayCount < projects.length && (
           <div className="text-center mt-4">
             <button className="btn btn-secondary" onClick={handleViewMore}>
@@ -141,6 +170,7 @@ const Projects = () => {
       </div>
     </section>
   );
+  
 };
 
 export default Projects;

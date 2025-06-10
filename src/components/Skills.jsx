@@ -29,7 +29,7 @@ import python from '../assets/python.png';
 
 const originalImages = [img1, img2, img3, img4, img5, img6, img7, img8, img9, img10];
 const skillImages = [react, javascript, html, css, tailwind, bootstrap, node, express, mongo, python];
-const labels = ['React', 'JavaScript', 'HTML', 'CSS', 'Tailwind', 'Bootstrap', 'Node.js', 'Express', 'MongoDB', 'Python'];
+const labels = ['React.Js', 'JavaScript', 'HTML5', 'CSS3', 'Tailwind CSS', 'Bootstrap', 'Node.js', 'Express', 'MongoDB', 'Python'];
 const proficiencyLevels = [95, 85, 95, 95, 90, 80, 85, 80, 90, 80];
 
 const SkillCarousel = () => {
