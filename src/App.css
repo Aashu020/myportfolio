@@ -26,3 +26,68 @@ VRoid Studio (Free)
 Sketchfab (Free with paid options)
 
 Ready Player Me (also anime-like avatars) */
+
+.animated-border {
+  position: relative;
+  border-radius: 1rem;
+  overflow: hidden;
+  animation: tilt3D 5s ease-in-out infinite;
+}
+
+.animated-border::before {
+  content: "";
+  position: absolute;
+  inset: -50%;
+  background: conic-gradient(
+    from 0deg,
+    white,
+    black,
+    white,
+    rgb(219, 217, 217),
+    white,
+    rgb(219, 217, 217)
+  );
+  animation: spin 2s linear infinite;
+  z-index: 1;
+}
+
+.animated-border::after {
+  content: "";
+  position: absolute;
+  top: 0.5px;
+  right: 0.5px;
+  bottom: 0.5px;
+  left: 0.5px;
+  background: rgb(252,250,246);
+  border-radius: 0.875rem;
+  z-index: 2;
+}
+
+.inner {
+  position: relative;
+  z-index: 3;
+  background-color: transparent;
+  height: 100%;
+  width: 100%;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0turn);
+  }
+  100% {
+    transform: rotate(1turn);
+  }
+}
+
+@keyframes tilt3D {
+  0% {
+    transform: perspective(1000px) translate3d(0, 15px, 0px) rotateX(1deg) rotateY(1deg) rotateZ(0.2deg);
+  }
+  50% {
+    transform: perspective(1000px) translate3d(0, -5px, 0) rotateX(0deg) rotateY(-1deg) rotateZ(-0.2deg);
+  }
+  100% {
+    transform: perspective(1000px) translate3d(0, 15px, 0) rotateX(-1deg) rotateY(1deg) rotateZ(0.2deg);
+  }
+}
